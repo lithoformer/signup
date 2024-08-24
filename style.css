@@ -11,7 +11,7 @@
 :root{
     --outside-padding: 70px;
     --inside-padding: 30px;
-    --right-margins: 40px;
+    --right-margins: 30px;
 }
 
 .outer{
