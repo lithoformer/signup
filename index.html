@@ -11,15 +11,46 @@
 <body>
     <div class="outer">
         <div class="leftpanel">
-            <div class="title"><img src="odin-lined.png" height="10%" width="10%">Odin Project</div>
+            <div class="title"><img src="odin-lined.png" height="15%" width="15%">Odin Project</div>
+            <div class="footer">Photo by &nbsp<a class="links" href="https://unsplash.com/@lucas_02">Lucas
+                    Derksen</a>&nbsp on &nbsp<a class="links" href="https://unsplash.com/">Unsplash</a></div>
         </div>
         <div class="rightpanel">
-            <div class="righttop">You know you need something like this in your life to help you realized your deepest
-                dreams. Sign up <em>now</em> to get started.<br>You <em>know</em> you want to.</div>
-            <div class="rightmiddle">Let' s do this!</div>
-            <div class="rightbottom">Already have an account?</div>
+            <div class="toptext">
+                <div>This is not a real online service! You know you need something like this in your life
+                    to help you realize your deepest dreams.</div>
+                <div>Sign up <i>now</i> to get started.</div>
+                <div>You <i>know</i> you want to.</div>
+            </div>
+            <div class="rightmiddle">
+                <form id="myForm">
+                    <div class="dothis">Let's do this!<br /></div>
+                    <div class="fields">
+                        <div class="firstName"><label for="firstName">FIRST NAME</label><br><input type="text"
+                                name="firstName" id="firstName" required></div>
+                        <div class="lastName"><label for="lastName">LAST NAME</label><br><input type="text"
+                                name="lastName" id="lastName" required></div>
+                        <div class="email"><label for="email">EMAIL</label><br><input type="email" name="email"
+                                id="email" required>
+                        </div>
+                        <div class="phoneNumber"><label for="phoneNumber">PHONE NUMBER</label><br><input type="tel"
+                                name="phoneNumber" id="phoneNumber" required></div>
+                        <div class="password"><label for="password">PASSWORD</label><br><input type="password"
+                                name="password" id="password" required></div>
+                        <div class="confirm"><label for="confirm">CONFIRM PASSWORD</label><br><input type="password"
+                                name="confirm" id="confirm" required></div>
+                    </div>
+            </div>
+            </form>
+            <div class="bottom">
+                <button type="submit" form="myForm" class="submitButton">Create Account</button>
+                <div class="bottomtext">
+                    Already have an account? <span class="login"><a class="login" href="#">Log in</a></span>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>

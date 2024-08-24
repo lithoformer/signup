@@ -11,6 +11,9 @@
 :root{
     margin: 0;
     padding: 0;
+    --outside-padding: 75px;
+    --inside-padding: 30px;
+    --right-margins: 66px;
 }
 
 .outer{
@@ -30,17 +33,143 @@
     min-width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    margin-top: 300px;
+}
+
+.footer{
+    margin-top: 725px;
+    font-size: 20px;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links:visited{
+    color:slateblue;
 }
 
 .leftpanel {
-    display:flex;
-    align-items:center;
-    justify-content: center;
     font-family: 'norsebold',Arial, Helvetica, sans-serif;
     font-size: 120px;
-    min-height: 100vh;
-    min-width: 50vw;
+    max-height: 100vh;
+    max-width: 35vw;
     background-image: url('./lucas-derksen-GZ_HIGTV2m8-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: left;
+    background-position: center;
+}
+
+.rightpanel{
+    display:flex;
+    flex-direction:column;
+    font-weight: 600;
+    font-size: 2.5rem;
+    max-width: 66vw;
+    max-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: whitesmoke;
+}
+
+.rightmiddle{
+    display:flex;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    max-width: 100%;
+    max-height: 50%;
+    font-size: 1rem;
+    box-shadow: 10px 10px 10px 0px #79858E;
+}
+
+.fields{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 100%;
+    max-width: 50%;
+    padding: calc(var(--outside-padding) - var(--inside-padding))
+}
+
+.dothis{
+    display:flex;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-left: var(--outside-padding);
+    margin-top: var(--inside-padding);
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.firstName,.lastName,.email,.phoneNumber,.password,.confirm {
+    padding:var(--inside-padding);
+}
+
+input:invalid{
+    border:1px solid red;
+}
+
+input:valid{
+    border:1px solid green;
+}
+
+input:focus{
+    border:1px solid blue;
+    box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
+}
+
+input{
+    font-size: 1.5rem;
+    min-width: 100px;
+    min-height: 30px;
+    border-radius: 5px;
+}
+
+.toptext,.bottomtext{
+    padding: var(--outside-padding);
+}
+
+.toptext{
+    margin-top: var(--right-margins);
+}
+
+.bottomtext{
+    margin-bottom: var(--right-margins);
+}
+
+.login{
+    text-decoration: none;
+}
+
+.login:visited{
+    color: slateblue;
+}
+
+.bottom{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.submitButton{
+    margin-left: var(--outside-padding);
+    margin-top: var(--outside-padding);
+    font-weight: bold;
+    min-height: 50px;
+    min-width:200px;
+    background-color: slategray;
+    border-radius: 1rem;
+    font-size: large;
+    box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
 }
