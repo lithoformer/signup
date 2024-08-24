@@ -1,7 +1,7 @@
 const password = document.querySelector('password');
-const confirmed = document.querySelector('confirm');
+const confirmed = document.querySelector('confirmed');
 
-if(confirmed.value !== password.value)
+if(confirmed.textContent !== password.textContent)
 {
 
 }
