@@ -11,7 +11,7 @@
 :root{
     --outside-padding: 70px;
     --inside-padding: 30px;
-    --right-margins: 42px;
+    --right-margins: 40px;
 }
 
 .outer{
@@ -92,7 +92,7 @@
     flex-wrap: wrap;
     max-height: 100%;
     max-width: 50%;
-    padding: calc(var(--outside-padding) - var(--inside-padding))
+    padding: calc(var(--outside-padding) - var(--inside-padding));
 }
 
 .dothis{
@@ -172,4 +172,12 @@ input{
     border-radius: 1rem;
     font-size: large;
     box-shadow: 3px 3px 4px  rgba(0,0,0,.5);
+}
+
+.error{
+    color: red;
+}
+
+.success{
+    color:green;
 }

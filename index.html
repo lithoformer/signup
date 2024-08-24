@@ -23,28 +23,36 @@
                 <div>You <i>know</i> you want to.</div>
             </div>
             <div class="rightmiddle">
-                <form id="myForm">
+                <form id="myForm" novalidate>
                     <div class="dothis">Let's do this!<br /></div>
                     <div class="fields">
                         <div class="firstName"><label for="firstName">FIRST NAME*</label><br><input type="text"
-                                name="firstName" id="firstName" placeholder="Odin" required></div>
+                                name="firstName" id="firstName" placeholder="Odin" minlength="2" maxlength="20"
+                                required></div>
                         <div class="lastName"><label for="lastName">LAST NAME*</label><br><input type="text"
-                                name="lastName" id="lastName" placeholder="Project" required></div>
+                                name="lastName" id="lastName" placeholder="Project" minlength="2" maxlength="20"
+                                required></div>
                         <div class="email"><label for="email">EMAIL*</label><br><input type="email" name="email"
                                 id="email" placeholder="email@address.com" required>
                         </div>
                         <div class="phoneNumber"><label for="phoneNumber">PHONE NUMBER*</label><br><input type="text"
                                 name="phoneNumber" id="phoneNumber" placeholder="555-555-5555"
-                                pattern="^[\(]?([0-9]{3})[\.\-\)]?([0-9]{3})[\.\-]?([0-9]{4})$" required></div>
+                                pattern="^([\+][0-9]{1,})?([\(])?([0-9]{3})([\.\-\)])?([0-9]{3})[\.\-]?([0-9]{4})|[0-9]{10}$"
+                                required>
+                        </div>
                         <div class="password"><label for="password">PASSWORD*</label><br><input type="password"
-                                name="password" id="password" required></div>
+                                name="password" id="password" placeholder="Enter password" required><br><span
+                                id="passwordError">&nbsp</span>
+                        </div>
                         <div class="confirmed"><label for="confirmed">CONFIRM PASSWORD*</label><br><input
-                                type="password" name="confirmed" id="confirmed" required></div>
+                                type="password" name="confirmed" id="confirmed" placeholder="Confirm password"
+                                required><br><span id="confirmError" class="error">&nbsp</span>
+                        </div>
                     </div>
             </div>
             </form>
             <div class="bottom">
-                <button type="submit" form="myForm" class="submitButton">Create Account</button>
+                <button type="submit" form="myForm" class="submitButton" id="submitButton">Create Account</button>
                 <div class="bottomtext">
                     Already have an account? <span class="login"><a class="login" href="#">Log in</a></span>
                 </div>
