@@ -89,6 +89,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    align-content: flex-start;
     flex-wrap: wrap;
     max-height: 100%;
     max-width: 50%;

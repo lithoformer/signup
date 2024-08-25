@@ -21,7 +21,7 @@ if(!firstName.value || !lastName.value || !phone.value || !email.value || !passw
     isValid = false;
 }
 
-if(!password.checkValidity())
+if(password.validity.patternMismatch || !password.value)
 {
     passwordErrorElement.textContent = 'Password not OK';
     passwordErrorElement.classList.remove('success');
@@ -37,6 +37,13 @@ else{
 if(confirmed.value !== password.value)
 {
     confirmErrorElement.textContent = 'Passwords do not match';
+    confirmErrorElement.classList.remove('success');
+    confirmErrorElement.classList.add('error');
+    isValid = false;
+}
+else if(confirmed.validity.patternMismatch || !confirmed.value)
+{
+    confirmErrorElement.textContent = 'Password not OK';
     confirmErrorElement.classList.remove('success');
     confirmErrorElement.classList.add('error');
     isValid = false;
